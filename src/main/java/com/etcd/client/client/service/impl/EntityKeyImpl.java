@@ -1,6 +1,6 @@
-package com.etcd.client.service.impl;
+package com.etcd.client.client.service.impl;
 
-import com.etcd.client.service.EntityKey;
+import com.etcd.client.client.service.EntityKey;
 
 import io.etcd.jetcd.ByteSequence;
 

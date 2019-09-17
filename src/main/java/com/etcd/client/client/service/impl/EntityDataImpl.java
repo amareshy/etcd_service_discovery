@@ -1,9 +1,9 @@
-package com.etcd.client.service.impl;
+package com.etcd.client.client.service.impl;
 
-import com.etcd.client.service.EntityData;
-import com.etcd.client.service.EntityKey;
-import com.etcd.client.service.EntityProperty;
-import com.etcd.client.service.EntityValue;
+import com.etcd.client.client.service.EntityData;
+import com.etcd.client.client.service.EntityKey;
+import com.etcd.client.client.service.EntityProperty;
+import com.etcd.client.client.service.EntityValue;
 
 public class EntityDataImpl implements EntityData
 {

@@ -5,18 +5,20 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.etcdserver</groupId>
-	<artifactId>etcd_service_discovery_client</artifactId>
+	<groupId>com.etcd.client</groupId>
+	<artifactId>client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>${project.groupId}.${project.artifactId}</name>
 	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<build.plugins.plugin.version>2.3.2</build.plugins.plugin.version>
+		<bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
+		<bundle.namespace>${project.groupId}.${project.artifactId}</bundle.namespace>
+		<guava.version>22.0-android</guava.version>
 
 		<!-- ETCD Server -->
 		<jetcd-version>0.3.0</jetcd-version>
-		<retry4j.version>0.12.0</retry4j.version>
 
 		<!-- Spring -->
 		<spring-boot.version>2.0.0.RELEASE</spring-boot.version>
@@ -32,11 +34,17 @@
 			<groupId>io.etcd</groupId>
 			<artifactId>jetcd-core</artifactId>
 			<version>${jetcd-version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>guava</artifactId>
+					<groupId>com.google.guava</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>com.evanlennick</groupId>
-			<artifactId>retry4j</artifactId>
-			<version>${retry4j.version}</version>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
 		</dependency>
 		<!-- Spring dependency -->
 		<dependency>
@@ -56,35 +64,45 @@
 			<version>${gson.version}</version>
 		</dependency>
 	</dependencies>
-
+	<!-- mvn deploy:deploy-file -Dfile=/home/amaresh/user_drive/Study/Git_Hub/etcd_service_discovery/target/client-0.0.1-SNAPSHOT.jar 
+		-DgroupId=com.etcd.client -DartifactId=client -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar 
+		-Durl=file:./maven-repository/ -DrepositoryId=maven-repository -DupdateReleaseInfo=true -->
+	<repositories>
+		<repository>
+			<id>maven-repository</id>
+			<url>file:///${project.basedir}/maven-repository</url>
+		</repository>
+	</repositories>
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-				</configuration>
-				<version>${build.plugins.plugin.version}</version>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${spring-boot.version}</version>
-				<configuration>
-					<mainClass>${start-class}</mainClass>
-					<!--<jvmArguments>-Xdebug</jvmArguments> -->
-					<!--<jvmArguments>-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</jvmArguments> -->
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>repackage</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+					<version>${build.plugins.plugin.version}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>${spring-boot.version}</version>
+					<configuration>
+						<mainClass>${start-class}</mainClass>
+						<!--<jvmArguments>-Xdebug</jvmArguments> -->
+						<!--<jvmArguments>-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</jvmArguments> -->
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
 	</build>
 </project>

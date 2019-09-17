@@ -1,4 +1,4 @@
-package com.etcd.client.datasource;
+package com.etcd.client.client.datasource;
 
 import java.net.URI;
 

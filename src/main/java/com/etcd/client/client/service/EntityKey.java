@@ -1,7 +1,7 @@
-package com.etcd.client.service;
+package com.etcd.client.client.service;
 
-import com.etcd.client.service.impl.EntityKeyImpl.EntityKeyBuilder;
-import com.etcd.client.service.impl.QueryOption;
+import com.etcd.client.client.service.impl.QueryOption;
+import com.etcd.client.client.service.impl.EntityKeyImpl.EntityKeyBuilder;
 
 import io.etcd.jetcd.ByteSequence;
 

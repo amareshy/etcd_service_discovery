@@ -3,7 +3,7 @@ package com.etcd.client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.etcd.client.service.LeaseKeepAliveObserver;
+import com.etcd.client.client.service.LeaseKeepAliveObserver;
 
 import io.etcd.jetcd.lease.LeaseKeepAliveResponse;
 

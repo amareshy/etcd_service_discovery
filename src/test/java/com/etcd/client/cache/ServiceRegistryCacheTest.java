@@ -9,7 +9,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.etcd.client.service.EtcdDataAccessorService;
+import com.etcd.client.client.cache.ServiceRegistryCache;
+import com.etcd.client.client.service.EtcdDataAccessorService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ComponentScan("com.etcd.client")

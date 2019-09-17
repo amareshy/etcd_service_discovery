@@ -1,4 +1,4 @@
-package com.etcd.client;
+package com.etcd.client.client;
 
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;

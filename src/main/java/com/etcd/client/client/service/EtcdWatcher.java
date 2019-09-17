@@ -1,4 +1,4 @@
-package com.etcd.client.service;
+package com.etcd.client.client.service;
 
 import java.util.function.Consumer;
 

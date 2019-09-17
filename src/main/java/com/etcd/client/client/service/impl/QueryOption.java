@@ -1,4 +1,4 @@
-package com.etcd.client.service.impl;
+package com.etcd.client.client.service.impl;
 
 import io.etcd.jetcd.options.GetOption.SortOrder;
 

@@ -1,4 +1,4 @@
-package com.etcd.client.datasource;
+package com.etcd.client.client.datasource;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;

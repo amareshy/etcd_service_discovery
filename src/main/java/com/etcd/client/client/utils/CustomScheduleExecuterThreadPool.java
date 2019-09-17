@@ -1,4 +1,4 @@
-package com.etcd.client.utils;
+package com.etcd.client.client.utils;
 
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadFactory;

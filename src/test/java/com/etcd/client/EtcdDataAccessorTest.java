@@ -16,13 +16,13 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.etcd.client.service.EntityData;
-import com.etcd.client.service.EntityKey;
-import com.etcd.client.service.EntityProperty;
-import com.etcd.client.service.EntityValue;
-import com.etcd.client.service.EtcdDataAccessorService;
-import com.etcd.client.service.EtcdWatcher;
-import com.etcd.client.service.impl.QueryOption;
+import com.etcd.client.client.service.EntityData;
+import com.etcd.client.client.service.EntityKey;
+import com.etcd.client.client.service.EntityProperty;
+import com.etcd.client.client.service.EntityValue;
+import com.etcd.client.client.service.EtcdDataAccessorService;
+import com.etcd.client.client.service.EtcdWatcher;
+import com.etcd.client.client.service.impl.QueryOption;
 import com.google.common.base.Charsets;
 
 import io.etcd.jetcd.watch.WatchResponse;

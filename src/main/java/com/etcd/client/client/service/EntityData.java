@@ -1,6 +1,6 @@
-package com.etcd.client.service;
+package com.etcd.client.client.service;
 
-import com.etcd.client.service.impl.EntityDataImpl.EntityDataBuilder;
+import com.etcd.client.client.service.impl.EntityDataImpl.EntityDataBuilder;
 
 public interface EntityData
 {

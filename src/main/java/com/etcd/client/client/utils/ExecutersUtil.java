@@ -1,4 +1,4 @@
-package com.etcd.client.utils;
+package com.etcd.client.client.utils;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;

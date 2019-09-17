@@ -1,4 +1,4 @@
-package com.etcd.client.cache;
+package com.etcd.client.client.cache;
 
 public interface Cache<K, V>
 {

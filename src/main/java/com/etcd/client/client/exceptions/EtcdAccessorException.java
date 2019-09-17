@@ -1,4 +1,4 @@
-package com.etcd.client.exceptions;
+package com.etcd.client.client.exceptions;
 
 public class EtcdAccessorException extends Exception
 {

@@ -1,4 +1,4 @@
-package com.etcd.client.cache;
+package com.etcd.client.client.cache;
 
 import java.lang.ref.SoftReference;
 import java.util.LinkedHashSet;
@@ -18,10 +18,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
-import com.etcd.client.service.EntityData;
-import com.etcd.client.service.EntityKey;
-import com.etcd.client.service.EtcdDataAccessorService;
-import com.etcd.client.service.impl.QueryOption;
+import com.etcd.client.client.service.EntityData;
+import com.etcd.client.client.service.EntityKey;
+import com.etcd.client.client.service.EtcdDataAccessorService;
+import com.etcd.client.client.service.impl.QueryOption;
 import com.google.common.base.Charsets;
 
 import io.etcd.jetcd.watch.WatchEvent.EventType;

@@ -1,4 +1,4 @@
-package com.etcd.client.service.impl;
+package com.etcd.client.client.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.util.CollectionUtils;
 
-import com.etcd.client.datasource.EtcdConnection;
-import com.etcd.client.service.EntityData;
-import com.etcd.client.service.EntityKey;
-import com.etcd.client.service.EntityValue;
-import com.etcd.client.service.EtcdDataAccessorService;
-import com.etcd.client.service.EtcdWatcher;
+import com.etcd.client.client.datasource.EtcdConnection;
+import com.etcd.client.client.service.EntityData;
+import com.etcd.client.client.service.EntityKey;
+import com.etcd.client.client.service.EntityValue;
+import com.etcd.client.client.service.EtcdDataAccessorService;
+import com.etcd.client.client.service.EtcdWatcher;
 import com.google.common.base.Charsets;
 
 import io.etcd.jetcd.ByteSequence;

@@ -1,8 +1,8 @@
-package com.etcd.client.service.impl;
+package com.etcd.client.client.service.impl;
 
-import com.etcd.client.service.EntityProperty;
-import com.etcd.client.service.LeaseKeepAliveObserver;
-import com.etcd.client.service.impl.EntityKeyImpl.EntityKeyBuilder;
+import com.etcd.client.client.service.EntityProperty;
+import com.etcd.client.client.service.LeaseKeepAliveObserver;
+import com.etcd.client.client.service.impl.EntityKeyImpl.EntityKeyBuilder;
 
 public class EntityPropertyImpl implements EntityProperty
 {
