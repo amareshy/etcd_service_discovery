@@ -15,7 +15,7 @@
 		<build.plugins.plugin.version>2.3.2</build.plugins.plugin.version>
 		<bundle.symbolicName>${project.groupId}.${project.artifactId}</bundle.symbolicName>
 		<bundle.namespace>${project.groupId}.${project.artifactId}</bundle.namespace>
-		<guava.version>22.0-android</guava.version>
+		<guava.version>24.1.1-android</guava.version>
 
 		<!-- ETCD Server -->
 		<jetcd-version>0.3.0</jetcd-version>
